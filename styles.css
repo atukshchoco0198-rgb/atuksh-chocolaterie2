@@ -1,0 +1,244 @@
+/* ATUKSH – CHOCOLATERIE Custom Styles & Admin Dashboard */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Merriweather:ital,wght@0,400;0,700;1,300&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap');
+
+:root {
+    --cocoa-dark: #23120A;
+    --cocoa-primary: #382012;
+    --pahadi-pine: #1C3829;
+    --pahadi-gold: #D4AF37;
+    --pahadi-terracotta: #A64931;
+    --cream-bg: #FCFAF6;
+}
+
+/* Typography Utility Classes */
+.font-vibes {
+    font-family: 'Great Vibes', cursive !important;
+}
+.font-dancing {
+    font-family: 'Dancing Script', cursive !important;
+}
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif !important;
+}
+.font-merriweather {
+    font-family: 'Merriweather', serif !important;
+}
+.font-cormorant {
+    font-family: 'Cormorant Garamond', serif !important;
+}
+.font-cinzel {
+    font-family: 'Cinzel', serif !important;
+}
+.font-serif {
+    font-family: 'Playfair Display', Georgia, serif !important;
+}
+.font-sans {
+    font-family: 'Outfit', sans-serif !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FAF6F0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #B88F70;
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #754B2E;
+}
+
+/* Hover Underline effect */
+.hover-underline {
+    position: relative;
+}
+
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--pahadi-pine);
+    transition: width 0.25s ease-in-out;
+}
+
+.hover-underline:hover::after {
+    width: 100%;
+}
+
+/* Category Filter Active Tab */
+.cat-filter-btn {
+    border: 1px solid #E8D5C4;
+    background-color: #FFFFFF;
+    color: #53341E;
+}
+
+.cat-filter-btn:hover {
+    border-color: #754B2E;
+    color: #23120A;
+}
+
+.cat-filter-btn.active-tab {
+    background-color: #23120A;
+    color: #FCFAF6;
+    border-color: #23120A;
+    box-shadow: 0 4px 12px rgba(35, 18, 10, 0.2);
+}
+
+/* Custom Box Selection in Hamper Studio */
+.box-card.selected-box {
+    border-color: #1C3829 !important;
+    background-color: #F4FAF6 !important;
+    box-shadow: 0 4px 14px rgba(28, 56, 41, 0.15);
+    position: relative;
+}
+
+.box-card.selected-box::after {
+    content: '✓ Selected';
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #1C3829;
+}
+
+/* Ribbon Button Selection */
+.ribbon-btn {
+    transition: all 0.2s ease;
+}
+
+.ribbon-btn.active-ribbon {
+    border-color: #1C3829 !important;
+    background-color: #EAF2EC !important;
+    color: #1C3829 !important;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(28, 56, 41, 0.12);
+}
+
+/* Product Card Styling */
+.product-card {
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 30px rgba(56, 32, 18, 0.1);
+}
+
+/* Keyframe animations */
+@keyframes bounceSlow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.animate-bounce-slow {
+    animation: bounceSlow 3.5s ease-in-out infinite;
+}
+
+/* Visual chocolate slot item in Hamper Builder */
+.slot-ball {
+    aspect-ratio: 1;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.slot-ball.filled {
+    background: radial-gradient(circle at 35% 35%, #754B2E 0%, #23120A 100%);
+    color: #F5BE47;
+    box-shadow: 0 2px 5px rgba(35, 18, 10, 0.4);
+    border: 1px solid #D4AF37;
+}
+
+.slot-ball.empty {
+    border: 1.5px dashed #D5B79F;
+    background-color: #FFFFFF;
+    color: #B88F70;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-none::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* FAQ Active transition */
+.faq-item.active {
+    border-color: #946746;
+    background-color: #FFFFFF;
+}
+
+.faq-item.active .faq-toggle i {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Toast open animation */
+.toast-visible {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+}
+
+/* Mobile Nav Open state */
+#mobile-nav.open {
+    display: block;
+    animation: fadeInDown 0.25s ease forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Admin Dashboard Tab Styling */
+.admin-tab-btn.active {
+    border-color: #23120A !important;
+    color: #23120A !important;
+    font-weight: 700;
+}
+
+
+/* Real-Time Sync Indicator Glow */
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+    }
+}
+
+.realtime-glow {
+    animation: pulseGlow 2s infinite;
+}

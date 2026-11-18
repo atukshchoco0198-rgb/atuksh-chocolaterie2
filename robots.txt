@@ -1,0 +1,21 @@
+# Robots.txt for Atuksh Chocolaterie
+# https://atukshchocolaterie.com/
+
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://atukshchocolaterie.com/sitemap.xml
+
+# Allow all major search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /

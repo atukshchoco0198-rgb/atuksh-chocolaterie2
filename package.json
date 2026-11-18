@@ -1,0 +1,17 @@
+{
+  "name": "atuksh-chocolaterie",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Atuksh Chocolaterie Panchkula - Freshly Handcrafted Chocolates & Gift Hampers",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "atuksh-chocolaterie",
+    "chocolates",
+    "panchkula"
+  ],
+  "author": "Atul & Diksha",
+  "license": "UNLICENSED"
+}
